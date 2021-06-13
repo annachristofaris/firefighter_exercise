@@ -19,6 +19,13 @@ public interface Firefighter {
 	 */
 	int distanceTraveled();
 
-	void setLocation(CityNode burningBuilding);
+	/**
+	 * Sets a firefighter's current location {@param cityNode}
+	 */
+	void setLocation(CityNode cityNode);
+
+	/**
+	 * Increments the firefighter's total distance traveled by {@param distance}
+	 */
 	void addDistanceTraveled(int distance);
 }

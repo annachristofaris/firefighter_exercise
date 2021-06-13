@@ -27,9 +27,10 @@ public class FirefighterImpl implements Firefighter {
 	public void setLocation(CityNode destination) {
 		this.location = destination;
 	}
-	
+
+	@Override
 	public void addDistanceTraveled(int distance) {
 		this.distanceTraveled += distance;
 	}
-	
+
 }

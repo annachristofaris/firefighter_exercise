@@ -2,6 +2,10 @@ package main.api;
 
 import java.util.List;
 
+import main.api.exceptions.NoFireFoundException;
+import main.api.exceptions.NoFirefightersAvailableException;
+import main.api.exceptions.OutOfCityBoundsException;
+
 public interface FireDispatch {
 
   /**
@@ -20,6 +24,8 @@ public interface FireDispatch {
    * The FireDispatch will be notified of burning buildings via this method. It will then dispatch the
    * firefighters and extinguish the fires. We want to optimize for total distance traveled by all firefighters
    * @param burningBuildings list of locations with burning buildings
+ * @throws NoFirefightersAvailableException 
+ * @throws OutOfCityBoundsException 
    */
-  void dispatchFirefighers(CityNode... burningBuildings);
+  void dispatchFirefighters(CityNode... burningBuildings) throws NoFireFoundException, OutOfCityBoundsException, NoFirefightersAvailableException;
 }
